@@ -50,9 +50,13 @@ var AppView = (function(){
 		this.cacheDom();
 		this.attachEvents();
 
-		let iQuit = new SpeechSynthesisUtterance("OK Google, tell my boss 'I quit'");
-		iQuit.voice = window.speechSynthesis.getVoices().filter(x => x.name == "Google US English")[0]
-		setTimeout(() => window.speechSynthesis.speak(iQuit), 500);
+		window.speechSynthesis.onvoiceschanged = function(){
+			setTimeout(() => {
+				let iQuit = new SpeechSynthesisUtterance("OK Google, tell my boss 'I quit'");
+				iQuit.voice = window.speechSynthesis.getVoices().filter(x => x.name == "Google US English")[0]
+				window.speechSynthesis.speak(iQuit)
+		 	}, 500);
+		};
 	}
 
 	return {
