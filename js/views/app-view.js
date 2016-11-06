@@ -51,6 +51,7 @@ var AppView = (function(){
 		this.attachEvents();
 
 		let iQuit = new SpeechSynthesisUtterance("OK Google, tell my boss 'I quit'");
+		let voice = window.speechSynthesis.getVoices().filter(x => x.name == "Google US English")[0]
 		window.speechSynthesis.speak(iQuit);
 	}
 
