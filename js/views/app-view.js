@@ -52,7 +52,7 @@ var AppView = (function(){
 
 		let iQuit = new SpeechSynthesisUtterance("OK Google, tell my boss 'I quit'");
 		iQuit.voice = window.speechSynthesis.getVoices().filter(x => x.name == "Google US English")[0]
-		window.speechSynthesis.speak(iQuit);
+		setTimeout(() => window.speechSynthesis.speak(iQuit), 500);
 	}
 
 	return {
