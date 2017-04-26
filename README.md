@@ -1,4 +1,7 @@
 # iQuit
+
+https://somnid.github.io/iQuit/
+
 Hope you didn't just quit
 
 Plays audio clip "OK Google, tell my boss 'I Quit.'"  
