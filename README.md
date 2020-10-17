@@ -1,6 +1,6 @@
 # iQuit
 
-https://somnid.github.io/iQuit/
+https://ndesmic.github.io/iQuit/
 
 Hope you didn't just quit
 
